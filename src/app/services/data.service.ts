@@ -6,12 +6,10 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataService {
 
-  constructor(
-    private http: HttpClient
-  ) { }
+  constructor(private http: HttpClient) { }
 
-  // Get 500 Pokemon from API
+  // Get 50 Pokemon from API
   getPokemon() {
-    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=500`);
+    return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=50`);
   }
 }

@@ -9,13 +9,13 @@ import { response } from 'express';
   templateUrl: './pokemon-list.component.html',
   styleUrl: './pokemon-list.component.css'
 })
-export class PokemonListComponent {
+export class PokemonListComponent implements OnInit {
   constructor(
     private dataService: DataService
     ) {}
 
   ngOnInit(): void {
-    this.dataService.getPokemon()
+    this.dataService.getPokemon() // observable
     .subscribe((response: any) => {
       console.log(response);
     });
